@@ -1,30 +1,19 @@
 import os
 import pandas
 from category import getSubCat, getCat, getScore
-from find_file import extract_search_prefix_lines, find_file, extract_number_from_line, search_prefix
+from find_file import extract_search_prefix_lines, find_file, extract_number_from_line, search_prefix, fix_headers, \
+    fix_headers_in_directory
 
 import pandas as pd
 
 # List of file names to read
 file_names = [
-    # "INC/output/esbmc-incr.2023-09-19_16-45-29.results.SV-COMP23_unreach-call.csv",
-    # "IA/output/esbmc-incr.2023-09-19_16-45-26.results.SV-COMP23_unreach-call.csv",
-    "KIND/output/esbmc-kind.2023-11-01_18-30-10.results.g4.ReachSafety-Loops.csv",
-    "KIND-IA/output/esbmc-kind.2023-11-01_18-30-12.results.g4.ReachSafety-Loops.csv",
-    "KIND-IAC/output/esbmc-kind.2023-11-01_18-30-11.results.g4.ReachSafety-Loops.csv",
-    "recheck/output/esbmc-kind.2023-11-06_19-31-18.results.g4.ReachSafety-Loops.csv"
-    #"KIND/output/esbmc-kind.2023-09-21_10-57-18.results.SV-COMP23_unreach-call.csv",
-    #"KIND-IA/output/esbmc-kind.2023-09-20_14-54-07.results.SV-COMP23_unreach-call.csv",
-    #"KIND-IA/output/esbmc-kind.2023-10-18_17-09-36.results.SV-COMP23_unreach-call.csv",
-    # "KIND-IAC/output/esbmc-kind.2023-09-20_14-54-11.results.SV-COMP23_unreach-call.csv"
-    #"KIND-IAC/output/esbmc-kind.2023-10-09_14-20-02.results.SV-COMP23_unreach-call.csv"
-    #"KIND-IAC/output/esbmc-kind.2023-10-18_17-09-30.results.SV-COMP23_unreach-call.csv"
+    #"results/INC.csv",
+    #"results/INC-ia.csv",
+    #"results/INC-iac"
 ]
 
 search_dir = [
-    # "INC/output/logs/",
-    # "IA/output/logs/",
-    # "IAC/output/logs/",
     "KIND/output/logs/",
     "KIND-IA/output/logs/",
     "KIND-IAC/output/logs/"
@@ -36,10 +25,15 @@ subcategory_data = {}
 read_first_2_columns_once = False
 selected_columns = []
 
+fix_headers_in_directory("results","new_results")
+
+file_names = os.listdir("new_results")
+
 # Read each CSV file and append its DataFrame to the list
 for file_name in file_names:
     try:
-        df = pd.read_csv(file_name, delimiter='\t')
+        df = pd.read_csv("new_results/"+file_name, delimiter='\t')
+        print(file_name)
         if not read_first_2_columns_once:
             selected_columns.append(df.iloc[:, 0:2])
             read_first_2_columns_once = True

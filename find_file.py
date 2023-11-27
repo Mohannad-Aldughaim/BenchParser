@@ -3,6 +3,35 @@ import re
 
 search_prefix = "Runtime decision procedure:"
 
+def fix_headers_in_directory(input_dir, output_dir):
+    # Create the output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+
+    # List all files in the input directory
+    files = os.listdir(input_dir)
+
+    # Process each file in the input directory
+    for file in files:
+        if file.endswith(".csv"):  # Filter only .txt files
+            input_path = os.path.join(input_dir, file)
+            output_path = os.path.join(output_dir, file)
+            fix_headers(input_path, output_path)
+
+    print("All files in the directory processed.")
+def fix_headers(input_file, output_file):
+    # Define the new header
+    new_header = "benchmarks\tCTRL\tstatus\tcputime(s)\twalltime(s)\tmemory(MB)\n"
+
+    # Read the input file and replace the first three lines
+    with open(input_file, "r") as file_in:
+        lines = file_in.readlines()
+        lines[:3] = new_header
+
+    # Write the modified content to the output file
+    with open(output_file, "w") as file_out:
+        file_out.writelines(lines)
+
+    print("Header replacement completed.")
 
 def find_file(file_name, search_directory):
     for root, dirs, files in os.walk(search_directory):
