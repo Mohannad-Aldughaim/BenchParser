@@ -20,7 +20,10 @@ def getSubCat(ssc):
           ssc == "openssl-simplified" or
           ssc == "locks" or
           ssc == "ntdrivers" or
-          ssc == "openssl"):
+          ssc == "openssl" or
+          ssc == "memory-model" or
+          ssc == "unsignedintegeroverflow-sas23" or
+          ssc == "longjmp"):
         subcat = "ReachSafety-ControlFlow"
     elif (ssc == "eca-rers2012" or
           ssc == "eca-rers2018" or
@@ -32,7 +35,8 @@ def getSubCat(ssc):
           ssc == "float-benchs" or
           ssc == "floats-esbmc-regression" or
           ssc == "float-newlib" or
-          ssc == "loop-floats-scientific-comp"):
+          ssc == "loop-floats-scientific-comp" or
+          ssc == "neural-networks"):
         subcat = "ReachSafety-Floats"
     elif (ssc == "heap-manipulation" or
           ssc == "list-properties" or
@@ -64,7 +68,8 @@ def getSubCat(ssc):
           ssc == "verifythis/tree_del_it" or
           ssc == "verifythis/tree_del_iter_incorre" or
           ssc == "nla-digbench" or
-          ssc == "nla-digbench-scaling"):
+          ssc == "nla-digbench-scaling" or
+          ssc == "verifythis"):
         subcat = "ReachSafety-Loops"
     elif ssc == "product-lines":
         subcat = "ReachSafety-ProductLines"
@@ -77,7 +82,11 @@ def getSubCat(ssc):
           ssc == "verifythis/tree_m" or
           ssc == "verifythis/tree_max_incorre" or
           ssc == "verifythis/elimination_max_r" or
-          ssc == "verifythis/elimination_max_rec_onepoi"):
+          ssc == "verifythis/elimination_max_rec_onepoi" or
+          ssc == "recursified_loop-crafted" or
+          ssc == "recursified_loop-invariants" or
+          ssc == "recursified_loop-simple" or
+          ssc == "recursified_nla-digbench"):
         subcat = "ReachSafety-Recursive"
     elif (ssc == "systemc" or
           ssc == "seq-mthreaded" or
@@ -165,6 +174,10 @@ def getSubCat(ssc):
         subcat = "SoftwareSystems-DeviceDriversLinux64-ReachSafety"
     elif (ssc == "uthash-2.0.2"):
         subcat = "SoftwareSystems-uthash-ReachSafety"
+    elif (ssc == "hardware-verification-array" or ssc == "hardware-verification-bv"):
+        subcat = "ReachSafety-Hardware"
+    elif(ssc == "fuzzle-programs"):
+        subcat = "ReachSafety-Fuzzle"
     elif ():
         subcat = ""
 
