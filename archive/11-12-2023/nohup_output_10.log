@@ -1,0 +1,89 @@
+nohup: ignoring input
+[36mScript started at Fri  8 Dec 17:17:35 UTC 2023[0m
+[32m[Fri  8 Dec 17:17:35 UTC 2023] Running setup and benchexec in set7_INC-ia/...[0m
+
+Statistics:           7289 Files
+  correct:            2432
+    correct true:      953
+    correct false:    1479
+  incorrect:           268
+    incorrect true:    106
+    incorrect false:   162
+  unknown:            4589
+  Score:             -2599 (max: 11647)
+
+INFO:     output/esbmc-inc.2023-12-08_17-17-35.results.SV-COMP24_unreach-call.xml.bz2
+INFO: Merging results...
+INFO: The resulting table will have 7289 rows and 4 columns (in 1 run sets).
+INFO: Generating table...
+INFO: Writing HTML into output/esbmc-inc.2023-12-08_17-17-35.results.SV-COMP24_unreach-call.html ...
+INFO: Writing CSV  into output/esbmc-inc.2023-12-08_17-17-35.results.SV-COMP24_unreach-call.csv ...
+INFO: done
+[95m[Sat  9 Dec 06:49:46 UTC 2023] Time taken for set7_INC-ia/: 13 hours 32 minutes 11 seconds.[0m
+/home/mhnd
+[32m[Sat  9 Dec 06:49:46 UTC 2023] Running setup and benchexec in set7_INC-iac/...[0m
+
+Statistics:           7289 Files
+  correct:            2426
+    correct true:      952
+    correct false:    1474
+  incorrect:           267
+    incorrect true:    105
+    incorrect false:   162
+  unknown:            4596
+  Score:             -2574 (max: 11647)
+
+INFO:     output/esbmc-inc.2023-12-09_06-49-47.results.SV-COMP24_unreach-call.xml.bz2
+INFO: Merging results...
+INFO: The resulting table will have 7289 rows and 4 columns (in 1 run sets).
+INFO: Generating table...
+INFO: Writing HTML into output/esbmc-inc.2023-12-09_06-49-47.results.SV-COMP24_unreach-call.html ...
+INFO: Writing CSV  into output/esbmc-inc.2023-12-09_06-49-47.results.SV-COMP24_unreach-call.csv ...
+INFO: done
+[95m[Sat  9 Dec 21:03:58 UTC 2023] Time taken for set7_INC-iac/: 14 hours 14 minutes 12 seconds.[0m
+/home/mhnd
+[32m[Sat  9 Dec 21:03:58 UTC 2023] Running setup and benchexec in set8_INC-ia/...[0m
+
+Statistics:           7289 Files
+  correct:            2413
+    correct true:      943
+    correct false:    1470
+  incorrect:           270
+    incorrect true:    107
+    incorrect false:   163
+  unknown:            4606
+  Score:             -2676 (max: 11647)
+
+INFO:     output/esbmc-inc.2023-12-09_21-03-58.results.SV-COMP24_unreach-call.xml.bz2
+INFO: Merging results...
+INFO: The resulting table will have 7289 rows and 4 columns (in 1 run sets).
+INFO: Generating table...
+INFO: Writing HTML into output/esbmc-inc.2023-12-09_21-03-58.results.SV-COMP24_unreach-call.html ...
+INFO: Writing CSV  into output/esbmc-inc.2023-12-09_21-03-58.results.SV-COMP24_unreach-call.csv ...
+INFO: done
+[95m[Sun 10 Dec 10:37:21 UTC 2023] Time taken for set8_INC-ia/: 13 hours 33 minutes 23 seconds.[0m
+/home/mhnd
+[32m[Sun 10 Dec 10:37:21 UTC 2023] Running setup and benchexec in set8_INC-iac/...[0m
+
+Statistics:           7289 Files
+  correct:            2398
+    correct true:      934
+    correct false:    1464
+  incorrect:           268
+    incorrect true:    105
+    incorrect false:   163
+  unknown:            4623
+  Score:             -2636 (max: 11647)
+
+INFO:     output/esbmc-inc.2023-12-10_10-37-21.results.SV-COMP24_unreach-call.xml.bz2
+INFO: Merging results...
+INFO: The resulting table will have 7289 rows and 4 columns (in 1 run sets).
+INFO: Generating table...
+INFO: Writing HTML into output/esbmc-inc.2023-12-10_10-37-21.results.SV-COMP24_unreach-call.html ...
+INFO: Writing CSV  into output/esbmc-inc.2023-12-10_10-37-21.results.SV-COMP24_unreach-call.csv ...
+INFO: done
+[95m[Mon 11 Dec 00:57:46 UTC 2023] Time taken for set8_INC-iac/: 14 hours 20 minutes 25 seconds.[0m
+/home/mhnd
+[Mon 11 Dec 00:57:46 UTC 2023] Skipping directory sv-benchmarks/.
+[36mScript ended at Mon 11 Dec 00:57:46 UTC 2023[0m
+[36mTotal execution time: 55 hours 40 minutes 11 seconds.[0m
